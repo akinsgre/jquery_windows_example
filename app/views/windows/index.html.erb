@@ -1,0 +1,21 @@
+<h1>Windows#index</h1>
+
+<script language="javascript" >
+$(function() {
+$.window({
+   showModal: true,
+   modalOpacity: 0.5,
+   icon: "http://www.fstoke.me/favicon.ico",
+   title: "Professional JavaScript for Web Developers",
+   content: $("#container").html()
+});
+});
+
+</script>
+
+
+
+<div id="container" class="clearfix" style="display:none">
+<div class="box col5" >
+  <iframe width="450" height="250" style="border: 1px solid #cccccc;" src="https://api.thingspeak.com/channels/3/charts/1?round=2&timescale=60"></iframe>
+</div>
