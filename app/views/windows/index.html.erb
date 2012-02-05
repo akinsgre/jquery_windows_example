@@ -1,21 +1,49 @@
 <h1>Windows#index</h1>
+<style>
+.boundary_panel {
+    display: inline-block;
+    border: 5px solid #ccc;
+    width: 95%;
+height: 500px;
+}
 
+</style>
 <script language="javascript" >
 $(function() {
-$.window({
-   showModal: true,
-   modalOpacity: 0.5,
-   icon: "http://www.fstoke.me/favicon.ico",
-   title: "Professional JavaScript for Web Developers",
-   content: $("#container").html()
+$("#my_boundary_panel").window({
+   icon: 'http://mail.google.com/favicon.ico',
+   title: "<%= 'This is a test' %>",
+   content: '<iframe width="450" height="250" style="border: 1px solid #cccccc;" src="https://api.thingspeak.com/channels/3/charts/1?round=2&timescale=60"></iframe>',
+   checkBoundary: true,
+   width: 460,
+   height: 320,
+   x: 0,
+   y: 0
 });
+
+$("#my_boundary_panel").window({
+   icon: 'http://mail.google.com/favicon.ico',
+   title: "This window only can be dragged within its parent element",
+   content: '<iframe width="450" height="250" style="border: 1px solid #cccccc;" src="https://api.thingspeak.com/channels/3/charts/1?round=2&timescale=60"></iframe>',
+   checkBoundary: true,
+   width: 460,
+   height: 320,
+   x: 470,
+   y: 0
+});
+
+
+
+
 });
 
 </script>
-
-
-
-<div id="container" class="clearfix" style="display:none">
-<div class="box col5" >
-  <iframe width="450" height="250" style="border: 1px solid #cccccc;" src="https://api.thingspeak.com/channels/3/charts/1?round=2&timescale=60"></iframe>
+<div>
+  <div id='my_boundary_panel' class="boundary_panel" ></div>
+  
 </div>
+
+
+
+    
+
