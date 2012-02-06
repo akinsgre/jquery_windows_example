@@ -1,0 +1,21 @@
+.ui-widget {
+    font-size: .4em;
+}
+.ui-widget-header {
+    background-image: none;
+}
+
+.ui-widget-content {
+    background-image: none;
+}
+
+.ui-icon {
+    background-image: none;
+}
+
+.boundary_panel {
+    display: inline-block;
+    border: 5px solid #ccc;
+    width: 95%;
+    height: 500px;
+}

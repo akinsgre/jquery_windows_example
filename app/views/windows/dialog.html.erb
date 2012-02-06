@@ -1,0 +1,16 @@
+<script language="javascript">
+$(function()
+{
+  var d = $("#window0").dialog({draggable: false, title: "one", resizable: false, heighth: "250px", width: "468px", position: [20, 15], closeOnEscape: false, autoOpen: false});
+  var e = $("#window1").dialog({draggable: false, title: "two", resizable: false, heighth: "250px", width: "468px", position: [500, 15], closeOnEscape: false, autoOpen: false});
+
+
+
+d.dialog("open");
+e.dialog("open");
+});
+</script>
+
+
+<div id="window0"><iframe width="450" height="250" style="border: 1px solid #cccccc;" src="https://api.thingspeak.com/channels/3/charts/1?round=2&timescale=60"></iframe></div>
+<div id="window1"><iframe width="450" height="250" style="border: 1px solid #cccccc;" src="https://api.thingspeak.com/channels/3/charts/1?round=2&timescale=60"></iframe></div>
