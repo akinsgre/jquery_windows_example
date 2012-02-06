@@ -13,9 +13,37 @@
     background-image: none;
 }
 
+.outer_div {
+    position: static;
+
+    width: 100%;
+
+    background-color: #ccc;
+    z-index: 998;
+}
 .boundary_panel {
+    position: static;
     display: inline-block;
-    border: 5px solid #ccc;
+    border: 5px solid #000;
+
     width: 95%;
     height: 500px;
+    position: relative;
+    z-index: 999;
 }
+
+#draggable {
+    width: 300px; 
+    height: 300px; 
+    background: red;
+}
+#draggable.ui-draggable-dragging {
+    background: green
+}
+#content {
+    height: 400px;
+}
+
+#droppable { 
+float: right; width: 300px; height: 300px; border: 1px solid #999; }
+
