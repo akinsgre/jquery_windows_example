@@ -1,17 +1,12 @@
 $(function () {
-    $('#draggable').dialog();
-    $('#draggable').draggable({
-	cursor: 'move',
-	container: 'document'
-
-	});
-    $('#droppable').droppable({
+    $('#draggable1').dialog({height: "300"});
+    $('#draggable2').dialog({height: "300"});
+    $('#draggable3').dialog({height: "300"});
+    $('.droppable').droppable({
 	drop: handleDropEvent
     });
 });
-function myHelper( event ) {
-  return '<img src="test.png"/>';
-}
+
 
 function handleDropEvent(event, ui) {
     var draggable = ui.draggable;
